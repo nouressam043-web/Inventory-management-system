@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports</title>
+    <link rel="stylesheet"href="{{url_for('static', filename='css/style.css')}}"> 
+</head>
+<body>
+    <h1>
+        Stock Alerts
+    </h1>
+
+    {% if low_stock %}
+        <table>
+            <tr><th>ID</th><th>Name</th><th>Quantity</th></tr>
+            {% for item in low_stock %}
+            <tr>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td style="color:red;">{{ item[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+       <p>All items are sufficiently stocked.</p>
+    {% endif %}
+
+    <a href="/" class="btn"> Back to Dashboard </a>
+</body>
+</html>

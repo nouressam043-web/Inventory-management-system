@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if edit %} Edit Item{% else %} Add Item {% endif %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <h1>
+        {%if edit %} Edit Item {% else %} Add Item {% endif %}
+    </h1>
+    <form action="{% if edit %}/edit/{{ item[0] }}{% else %}/add{% endif %}" method="POST">
+        <input type="text" name="name" placeholder="Item Name" value="{% if edit %}{{ item[1] }}{% endif %}" required>
+        <input type="number" name="quantity"placeholder="Quantity" value="{% if edit %}{{ item[2] }}{% endif %}" required>
+        <button type="submit">{% if edit %} Update Item{% else %} Add Item{% endif %}</button>
+    </form>
+    <a href="/"> Back to Dashboard</a>
+</body>
+</html>

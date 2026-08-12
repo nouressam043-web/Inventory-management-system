@@ -6,6 +6,6 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY . .
-EXPOSE 8000
-CMD ["gunicorn", "-b", ":8000", "inventory:app"]
+EXPOSE 8080
+CMD ["gunicorn", "-b", ":8080", "inventory:app"]
 
