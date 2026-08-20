@@ -1,117 +1,141 @@
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #7ca5e2;
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Uncial Antiqua', cursive;
 }
 
-/* Header bar */
-header {
-    background: #8147e5;
-    color: rgb(77, 135, 116);
-    padding: 15px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* Container */
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Links */
-a.btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 8px 15px;
-    background: #3498db;
+body {
+    background: linear-gradient(135deg, #6d28d9, #a855f7, #c084fc);
+    min-height: 100vh;
+    padding: 40px;
     color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-a.btn:hover {
-    background: #2176bd;
 }
 
-/* Table */
-table {
-    margin: auto;
-    border-collapse: collapse;
-    width: 100%;
-    background: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
+h1 {
     text-align: center;
+    font-size: 3rem;
+    font-family: 'Uncial Antiqua', cursive;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+}
+.page-container{
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255,255,255,0.8);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.btn,
+.edit-btn,
+.delete-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 6px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn {
+    background: #7c3aed;
+}
+
+.btn:hover {
+    background: #6d28d9;
+}
+
+.edit-btn {
+    background: #9333ea;
+}
+
+.edit-btn:hover {
+    background: #7e22ce;
+}
+
+.delete-btn {
+    background: #e11d48;
+}
+
+.delete-btn:hover {
+    background: #be123c;
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: #f5f3ff;
+    color: #2e1065;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 th {
-    background: #3498db;
-    color: rgb(136, 82, 144);
-    font-weight: bold;
+    background: #7c3aed;
+    color: white;
+    padding: 15px;
 }
 
-tr:nth-child(even) {
-    background: #f9f9f9;
+td {
+    padding: 15px;
+    border-bottom: 1px solid #d8b4fe;
 }
+
 tr:hover {
-    background: #e6f0ff;
+    background: #ede9fe;
 }
 
-/* Buttons */
-button, .edit-btn, .delete-btn {
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: bold;
+form {
+    max-width: 500px;
+    margin: auto;
+    background: #f5f3ff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Edit button */
-.edit-btn {
-    background: #3498db;
-    color: white;
-}
-.edit-btn:hover {
-    background: #2176bd;
-}
-
-/* Delete button */
-.delete-btn {
-    background: #e74c3c;
-    color: white;
-}
-.delete-btn:hover {
-    background: #c0392b;
-}
-
-/* Form inputs */
-input[type="text"], input[type="number"] {
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 80%;
-    font-size: 14px;
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #c084fc;
+    border-radius: 8px;
+    font-size: 15px;
 }
 
 button {
-    background: #8147e5;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #7c3aed;
     color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
 }
+
 button:hover {
-    background: #d78abc;
+    background: #6d28d9;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+body {
+background: #6d28d9 !important;
 }

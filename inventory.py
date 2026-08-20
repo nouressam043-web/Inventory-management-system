@@ -23,7 +23,7 @@ def index():
 
 
 ### to add item route so i can get shows form, POST saves the new item 
-@app.route("/add", methods=["GET", "POST"])
+@app.route("/add_item", methods=["GET", "POST"])
 def add_item():
     if request.method == "POST":
         name = request.form["name"]
@@ -78,5 +78,5 @@ def reports():
 
 if __name__ == "__main__":
     init_db()
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
 

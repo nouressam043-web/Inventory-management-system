@@ -2,12 +2,13 @@
 <html>
 <head>
     <title>Reports</title>
-    <link rel="stylesheet"href="{{url_for('static', filename='css/style.css')}}"> 
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
-    <h1>
-        Stock Alerts
-    </h1>
+    <div class="page-container">
+        <h1>
+            Stock Alerts
+        </h1>
 
     {% if low_stock %}
         <table>
@@ -25,5 +26,7 @@
     {% endif %}
 
     <a href="/" class="btn"> Back to Dashboard </a>
+
+</div>    
 </body>
 </html>
